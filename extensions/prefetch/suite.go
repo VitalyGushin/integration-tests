@@ -37,7 +37,7 @@ import (
 // Config is env config to setup images prefetching.
 type Config struct {
 	ImagesPerDaemonset int    `default:"10" desc:"Number of images created per DaemonSet" split_words:"true"`
-	Timeout            string `default:"10m" desc:"Kubectl rollout status timeout for the DaemonSet" split_words:"true"`
+	Timeout            string `default:"50m" desc:"Kubectl rollout status timeout for the DaemonSet" split_words:"true"`
 }
 
 // Suite creates `prefetch` daemonset which pulls all test images for all cluster nodes.
